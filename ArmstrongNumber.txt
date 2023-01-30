@@ -1,0 +1,21 @@
+
+#include <iostream>
+using namespace std;
+int main() {
+    int num,i,sum=0;
+    cin>>num;
+    i=num;
+    while(i>0){
+        int rem=i%10;
+        sum=sum+(rem*rem*rem);
+        i=i/10;
+    }
+    if(sum==num){
+        cout<<num<<" is a Armstrong Number"<<endl;
+    }
+    else{
+        cout<<num<<" is not Armstrong Number"<<endl;
+    }
+    
+    return 0;
+}
