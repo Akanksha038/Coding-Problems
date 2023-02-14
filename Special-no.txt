@@ -1,0 +1,25 @@
+#include <iostream>
+//program for special number
+using namespace std;
+
+int main()
+{
+    int d,num,i,sum=1,s=0;
+    cin>>num;
+    int number=num;
+    while(num>0){
+        int d=num%10;
+        for(i=d;i>=1;i--){
+            sum=sum*i;
+        }
+        s=s+sum;
+        sum=1;
+        num=num/10;
+    }
+    
+    if(s==number){
+        cout<<"Given Number "<<s<<" is a Special Number";
+    }
+    
+    return 0;
+}//main end
