@@ -1,0 +1,38 @@
+#include <iostream>
+
+using namespace std;
+void selectionsort(int input[],int n){
+    for(int i=0;i<n-1;i++)
+    {
+        
+     int min=input[i],min_index=i;
+     for(int j=i+1;j<n;j++)
+     {
+        
+         if(min>input[j])
+         {
+             min=input[j];
+             min_index=j;
+            
+         }
+        
+     }
+      //swap
+      int temp=input[i];
+      input[i]=min;
+      input[min_index]=temp;
+    }
+}
+
+int main()
+{
+    int input[]={5,4,7,8,544,1};
+    selectionsort(input,6);
+    for(int i=0;i<6;i++){
+        cout<<input[i]<<" ";
+
+    }
+    cout<<endl;
+    
+    return 0;
+}
